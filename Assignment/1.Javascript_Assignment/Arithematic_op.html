@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arithematic Operators (switch)</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h1>Assignment</h1>
+    <h2 style="text-align: center;"> Arithematic Operators using Switch Case</h2><br>
+    <div style="text-align: center;">
+        <button onclick="arithematic()" style="padding: 10px; font-size: 18px; text-align: center;">Click here for
+            Arithematic Operations</button><br>
+        <div id="op" style="border:1px solid black; padding:10px; width:400px;display:inline-block;"></div>
+    </div>
+    <script>
+        function arithematic() {
+
+            a = 1
+            do {
+                n1 = Number(prompt("Enter the First number :"))
+                n2 = Number(prompt("Enter the Second number :"))
+                option = Number(prompt("MENU FOR ARITHEMATIC OPERATORS : \n 1.Addition[+] \n 2. Subtraction[-] \n 3.multiplication[*] \n 4.Division[/] \n 5.Modulo Division[%] \n Choose any number mentioned above : "))
+                switch (option) {
+                    case 1: res = n1 + n2;
+                        document.getElementById("op").innerHTML += "Addtion of two given numbers (" + n1 + ") and (" + n2 + ") is : " + res + "<br>";
+                        break;
+                    case 2: res = n1 - n2;
+                        document.getElementById("op").innerHTML += "Subtraction of two given numbers (" + n1 + ") and (" + n2 + ") is : " + res + "<br>";
+                        break;
+                    case 3: res = n1 * n2;
+                        document.getElementById("op").innerHTML += "Multiplication of two given numbers (" + n1 + ") and (" + n2 + ") is : " + res + "<br>";
+                        break;
+                    case 4: res = n1 / n2;
+                        document.getElementById("op").innerHTML += "Division of two given numbers (" + n1 + ") and (" + n2 + ") is : " + res + "<br>";
+                        break;
+                    case 5: res = n1 % n2;
+                        document.getElementById("op").innerHTML += "Modulo division of two given numbers (" + n1 + ") and (" + n2 + ") is : " + res + "<br>";
+                        break;
+                    default: document.getElementById("op").innerHTML += "Addtion of two given numbers (" + n1 + ") and (" + n2 + ") is : " + res + "<br>";
+                        break;
+
+
+                }
+                a = Number(prompt("do you want to continue : \n 1.yes \n 2.no "))
+            } while (a == 1)
+
+
+
+
+        }
+    </script>
+
+
+</body>
+
+</html>

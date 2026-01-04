@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>prime numbers</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+    <h1>Assignment</h1>
+    <h2 style="text-align: center;"> prime numbers from 1 - 100 </h2><br>
+    <div style="text-align: center;">
+        <button onclick="prime()" style="padding: 10px;font-size: 18px;"> click here ! </button> <br>
+        <div id="prime"
+            style="border:1px solid black; padding:10px; width:300px;height:300px ;display:inline-block;overflow: auto;word-wrap: break-word;">
+        </div>
+    </div>
+    <script>
+        function prime() {
+
+            var num = 100
+            res = [1];
+            for (i = 2; i <= num; i++) {
+                let prime1 = true
+                let limit = Math.sqrt(i)
+                for (j = 2; j < limit; j++) {
+                    if (i % j == 0) {
+                        prime1 = false
+                        break;
+                    }
+
+                }
+                if (prime1) {
+                    res.push(i)
+
+                }
+            }
+            document.getElementById("prime").innerHTML += "prime number from 1 -100 are : " + res + "<br>";
+        }
+
+
+
+    </script>
+
+</body>
+
+</html>

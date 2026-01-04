@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript Operators</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        h2 {
+            text-align: start;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Assignment</h1>
+    <h2 style="text-align: center;">Question - 1 : JavaScript Operators</h2>
+    <h2> 1. Arithmetic Operators</h2>
+    <div>
+        <script>
+            //operators
+            var a = Number(prompt("enter a value: "));
+            var b = Number(prompt("enter b value: "));
+
+            //1 Arithmetic operators
+
+            //1.1 Addition
+            var addition = a + b;
+            document.writeln("addition of two numbers is: " + addition + "<br>");
+            //1.2 Subtraction
+            var Subtraction = b - a;
+            document.writeln("subtration of two numbers is; " + Subtraction + "<br>");
+            //1.3 multiplication
+            var multiplication = a * b;
+            document.writeln("multiplicaation of two number is: " + multiplication + "<br>");
+            //1.4 division
+            var division = b / a;
+            document.writeln("division of two number and thier qutiotent is: " + division + "<br>");
+            //1.5 modulus
+            var modulus = b % a;
+            document.writeln("modulus division of two numbers is(Remainder):" + modulus + "<br>");
+            //1.6 exponentiation
+            var power = a ** b;
+            document.writeln("a to the power of b is: " + power + "<br>");
+            //1.7 Increment
+            var Increment = a++;
+            document.writeln("A value Incremnted by 1: " + Increment + "<br>");
+            //1.8 decrement
+            var decrement = a--;
+            document.writeln("a value decremented by 1: " + decrement + "<br>");
+        </script>
+    </div>
+    <h2>2.Assignment operators</h2>
+    <div>
+        <script>
+            //2 Assignments operators
+            //2.1 Assignment
+            var x = 100;
+            document.writeln(" what is the value of a: " + x + "<br>");
+            //2.2 Compound assignment
+            document.writeln("Before using compound assignement for addition a value is: " + a + "<br>");
+            a += 2;
+            document.writeln("After using compound assignement for addition a value is:" + a + "<br>");
+        </script>
+    </div>
+    <h2>3.Relational Operators</h2>
+    <div>
+        <script>
+            // 3. Relational orcomparison operators
+            //3.1 Equalto
+            var Equalto = a == a;
+            document.writeln("Are the two values are equal?: " + Equalto + "<br>");
+            //3.2 notequalto
+            var notequalto = b != a;
+            document.writeln(" Are the two numbers are not equal?: " + notequalto + "<br>");
+            //3.3 Strictequalto
+            var Strictequalto = a === "a";
+            document.writeln("Are the two values are Identically equal?: " + Strictequalto + "<br>");
+            //3.4 Strictnotequalto
+            var Strictnotequalto = b !== "b";
+            document.writeln("Are the two values are strictnotequal?: " + Strictnotequalto + "<br>");
+            //3.5 Greaterthan
+            var Greaterthan = b > a;
+            document.writeln(" Is b is greater than a?: " + Greaterthan + "<br>");
+            //3.6 lessthan
+            var lessthan = a < b;
+            document.writeln("Is a is less than b?: " + lessthan + "<br>");
+            //3.7 Greaterthan or equalto 
+            var Greaterthan_or_equalto = a >= b;
+            document.writeln("Is a is Greaterthan or equalto b?: " + Greaterthan_or_equalto + "<br>");
+            //3.8 lessthan or equalto 
+            var lessthan_or_equalto = a <= b;
+            document.writeln("Is a is Greaterthan or equalto b?: " + lessthan_or_equalto + "<br>");
+        </script>
+    </div>
+    <h2>4.logical Operators</h2>
+    <div>
+        <script>
+            //4.1 Logical AND
+            let logical_and = a < b && a < x;
+            document.writeln("Are both statements are correct:(according to &&) " + logical_and + "<br>");
+            //4.2 Logical OR
+            var logical_or = a < b || a > x;
+            document.writeln("Is any of the statement is true:(according to ||) " + logical_or + "<br>");
+            //4.3 logical_NOT
+            var logical_NOT = !(a > b);
+            document.writeln("multiplicaation of two number is: " + logical_NOT + "<br>");
+
+        </script>
+    </div>
+    <h2>5.bitwise Operators</h2>
+    <div>
+        <script>
+            // 5.Bitwise Operators
+            //5.1 bitwise_AND
+            var bitwise_AND = a & b;
+            document.writeln("Bitwise And of a and b is:" + bitwise_AND + "<br>");
+            //5.2 bitwise_or
+            var bitwise_or = b | a;
+            document.writeln(" Bitwise OR of a and b is: " + bitwise_or + "<br>");
+            //5.3 bitwise_NOT
+            var bitwise_NOT = ~a;
+            document.writeln("Bitwise NOT of a : " + bitwise_NOT + "<br>");
+            //5.4 Leftshift
+            var Leftshift = a << 2;
+            document.writeln("Leftshift odf a for 2 times is: " + Leftshift + "<br>");
+            //5.5 Rightshift
+            var Rightshift = b >> 3;
+            document.writeln(" Rightshift of b for 3 times is : " + Rightshift + "<br>");
+        </script>
+    </div>
+    <hr>
+
+
+</body>
+
+</html>

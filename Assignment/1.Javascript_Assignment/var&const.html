@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VARIABLE vs CONSTANT</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h1>Assignment</h1>
+    <h2 style="text-align: center;">Question - 2 : VAR vs CONSTANT</h2>
+    <h2>VARIABLE</h2>
+    <div>
+        <script>
+            var x = prompt(" enter the value of x : VARIABLE ");
+            document.writeln("value of x (which is declared by using VARIABLE[var]) is:  ", x + "<br>");
+            document.writeln("we can Re-assign the value of x since it is a variable " + "<br>");
+        </script>
+        <div id="var" style="border:1px solid black; padding:10px; width:300px;">
+            Click the button to test reassigning variable:<br>
+            <button onclick="tryReassignvar()">try</button>
+            <script>
+                
+                function tryReassignvar() {
+                    try {
+                        x = prompt("Try to Reassign the variable value(x):")
+
+                    }
+                    catch (error) {
+                        document.getElementById("var").innerHTML += "<br>" + "<span style='color:red';> Error: " + error.message + "</span>"
+                    }
+                    document.getElementById("var").innerHTML += "<br>" + "New value of x is: " + x + "<br>";
+                    
+                }
+            </script>
+        </div>
+        </script>
+    </div>
+    <h2>CONSTANT</h2>
+    <div>
+        <script>
+            const y = prompt(" enter the value of Y: CONSTANT ");
+            document.writeln("value of Y (which is declared by using CONSTANT[var]) is: ", x + "<br>");
+            document.writeln("we cannot Re-assign the value of Y since it is a CONSTANT " + "<br>");
+        </script>
+        <div id="const" style="border:1px solid black; padding:10px; width:300px;">
+            Click the button to test reassigning const:<br>
+            <button onclick="tryReassign()">try</button>
+
+            <script>
+                function tryReassign() {
+                    try {
+                        y = prompt("Try to Reassign the constant value(y):")
+
+                    }
+                    catch (error) {
+                        document.getElementById("const").innerHTML += "<br>" + "<span style='color:red';> Error: " + error.message + "</span>"
+                    }
+                }
+            </script>
+        </div>
+    </div>
+
+
+</body>
+
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>changing background-color</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body id="bg">
+    <div id="box" style="text-align: center;">
+        <h1>PROJECT - 1</h1>
+
+        <button onclick="changeBg()" style="padding: 10px;text-align: center;">
+            click here to change the background color
+        </button>
+    </div>
+    <script>
+        function changeBg() {
+            const r = Math.floor(Math.random() * 256);
+            const g = Math.floor(Math.random() * 256);
+            const b = Math.floor(Math.random() * 256);
+
+            document.body.style.backgroundColor = `rgb(${r}, ${g}, ${b})`;
+
+
+        }
+    </script>
+</body>
+
+</html>

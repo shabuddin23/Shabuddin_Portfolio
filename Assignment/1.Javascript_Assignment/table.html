@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Number Table</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+    <h1>Assignment</h1>
+    <h2 style="text-align: center;">Question - : numbers in table </h2>
+    <table class="table table-hover table-dark table-striped table-responsive" ;border="1" cellpadding="8"
+        text-align="center" background-color="blueS">
+        <caption> cc: numbers from 1 to 100</caption>
+        <tbody id="table"></tbody>
+    </table>
+
+    <script>
+        const table = document.getElementById("table");
+
+        const numbersPerColumn = 10; // 1–10 per column
+        const totalNumbers = 100;    // change if needed
+        const totalColumns = totalNumbers / numbersPerColumn;
+
+        // Create a row for each number in a column block
+        for (let row = 0; row < numbersPerColumn; row++) {
+            let tr = document.createElement("tr");
+
+            // Create each column
+            for (let col = 0; col < totalColumns; col++) {
+                let value = col * numbersPerColumn + (row + 1);
+                if (value <= totalNumbers) {
+                    let td = document.createElement("td");
+                    td.textContent = value;
+                    tr.appendChild(td);
+                }
+            }
+
+            table.appendChild(tr);
+        }
+    </script>
+
+</body>
+
+</html>

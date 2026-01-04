@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student_Grade_System</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+
+<body>
+    <h1>Assignment</h1>
+    <h2 style="text-align: center;">Question - : Student Grade System</h2>
+
+    <div style="text-align: center;">
+        <button onclick="Grade_System()" style="padding: 10px; font-size: 18px; text-align: center;">
+            Click here to enter the subject marks !
+        </button><br>
+        <p id="Grade" style="border:1px solid black; padding:10px; width:400px;display: inline-block;"></p>
+    </div>
+    <script>
+        function Grade_System() {
+            var Telugu = Number(prompt("Enter your subject marks \n enter Telugu marks :"))
+            var Hindi = Number(prompt("enter Hindi marks :"))
+            var English = Number(prompt("enter English marks :"))
+            var Maths = Number(prompt("enter Maths marks :"))
+            var Science = Number(prompt("enter Science marks :"))
+            var Social = Number(prompt("enter social marks :"))
+            if (Telugu > 100 || Hindi > 100 || English > 100 || Maths > 100 || Science > 100 || Social > 100) {
+                document.getElementById("Grade").innerHTML += "Enter valid marks"
+            }
+            else {
+                if (Telugu < 35 || Hindi < 35 || English < 35 || Maths < 35 || Science < 35 || Social < 35) {
+                    document.getElementById("Grade").innerHTML += "your have Failed the exams " + "<br>";
+                }
+                else {
+                    document.getElementById("Grade").innerHTML += "You have Passed the exams" + "<br>";
+                }
+            }
+            total_student = Telugu + Hindi + English + Maths + Science + Social;
+            total_marks = 600
+            Percentage = (total_student / total_marks) * 100;
+            if (Percentage >= 90) {
+                document.getElementById("Grade").innerHTML += " You have achieved Grade A" + "<br>";
+            }
+            else if (Percentage < 90 && Percentage >= 75) {
+                document.getElementById("Grade").innerHTML += "You have achieved Grade B" + "<br>";
+            }
+            else if (Percentage < 75 && Percentage >= 50) {
+                document.getElementById("Grade").innerHTML += " You have achieved Grade C" + "<br>";
+            }
+            else if (Percentage < 50 && Percentage >= 35) {
+                document.getElementById("Grade").innerHTML += " You have achieved Grade D" + "<br>";
+            }
+            else {
+                document.getElementById("Grade").innerHTML += " You have achieved Grade F" + "<br>";
+            }
+
+
+        }
+    </script>
+    </div>
+</body>
+
+</html>

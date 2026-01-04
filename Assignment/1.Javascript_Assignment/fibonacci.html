@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Assignment</h1>
+    <h1>Fibonacci Sequence Generator</h1>
+    <div style="text-align:center">
+        <h2>click here to generate the fibonacci series</h2>
+        <button onclick="fib()" style="padding: 10px;font-size: 18px;">generater</button><br><br>
+        <p id="fib" style="border:1px solid black; padding:10px; width:70%;height:70% ;margin: auto;"></p>
+    </div>
+
+    <script>
+        function fib(){
+            var num =Number(prompt("enter the number of terms you want in fibonacci series : "))
+            var n1=0,n2=1
+            for(i=1;i<=num;i++){
+                document.getElementById("fib").innerHTML += n1 +", ";
+                var next=n1+n2
+                n1=n2
+                n2=next
+            }
+        }
+    </script>
+</body>
+</html>

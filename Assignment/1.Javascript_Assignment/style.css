@@ -1,0 +1,31 @@
+body {
+    background-color: #e6f3ff;
+}
+
+h1 {
+    text-align: center;
+    font-size: 40px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 20px;
+    color: #ff8c42;
+}
+
+h2 {
+    color: #0059b3;
+    font-weight: 600;
+    font-size: 25px;
+    margin: 10px;
+    text-align: center;
+}
+
+div {
+    color: #003366;
+    font-size: 15px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 10px;
+}
+
+div.button,
+div.button#Grade {
+    text-align: center;
+}

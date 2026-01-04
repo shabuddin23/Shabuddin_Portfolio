@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>min_max</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h1>Assignment</h1>
+    <h2 style="text-align: center;">Question - : Finding MIN and MAX</h2>
+    <div style="text-align: center;">
+        <button onclick="min_max()" style="padding: 10px; font-size: 18px; text-align: center;"> click
+            here ! </button><br>
+
+        <div id="number" style="border:1px solid black; padding:10px; width:400px;display:inline-block">
+        </div>
+    </div>
+    <script>
+        function min_max() {
+            n1 = Number(prompt("Enter first number : "))
+            n2 = Number(prompt("Enter Second Number : "))
+            n1 < n2 ? document.getElementById("number").innerHTML += " SECOND number is MAX" + "<br>" + "FIRST number is MIN" : document.getElementById("number").innerHTML += " FIRST number is MAX " + "<br>" + " SECOND  number is MIN";
+        }
+    </script>
+</body>
+
+</html>

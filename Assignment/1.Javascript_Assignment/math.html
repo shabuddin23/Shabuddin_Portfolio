@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>.Math object</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h1>Assignment/h1>
+    <h2 style="text-align: center;"> .Math object methods in table </h2><br>
+    <table border="1" cellpadding="10" style="margin:auto;text-align: center;">
+        <tbody id="table"></tbody>
+    </table>
+
+    <script>
+        var table = document.getElementById("table");
+
+        function tb(Method, Description, example, output) {
+            let tr = document.createElement("tr")
+            let t1 = document.createElement("td")
+            t1.textContent = Method
+            tr.appendChild(t1)
+            let t2 = document.createElement("td")
+            t2.textContent = Description
+            tr.appendChild(t2)
+            let t3 = document.createElement("td")
+            t3.textContent = example
+            tr.appendChild(t3)
+            let t4 = document.createElement("td")
+            t4.textContent = output
+            tr.appendChild(t4)
+            table.appendChild(tr)
+        }
+        tb("Method", "Description", "example", "output")
+        tb("Math.round(x)", "round to the nearest integer", "Math.round(4.6)", Math.round(4.6))
+        tb("Math.cell(x)", "round upward", "Math.ceil(4.1)", Math.ceil(4.1))
+        tb("Math.floor(x)", "round Downward", "Math.(4.9)", Math.floor(4.9))
+        tb("Math.trunc(x)", "removes decimal part", "Math.trunc(4.9)", Math.trunc(4.9))
+        tb("Math.abs(x)", "returns Absolute(+ve) value", "Math.abs(-7)", Math.abs(-7))
+        tb("Math.sqrt(x)", "returns square root", "Math.sqrt(16)", Math.sqrt(16))
+        tb("Math.pow(x)", "return power of x^y", "Math.pow(2,3)", Math.pow(2, 3))
+        tb("Math.min(...values)", "Minimun value", "Math.min(1,2,3)", Math.min(1, 2, 3))
+        tb("Math.max(...values)", "Maximum value", "Math.max(1,2,3)", Math.max(1, 2, 3))
+        tb("Math.random(x)", "Random value", "Math.random()", Math.random())
+        tb("Math.sin(x)", "Sine(in radians)", "Math.sin(Math.PI/2)", Math.sin(Math.PI / 2))
+        tb("Math.cos(x)", "cosine", "Math.cos(0)", Math.cos(0))
+        tb("Math.log(x)", "Natural Logarithm", "Math.log(1)", Math.log(1))
+
+
+
+    </script>
+</body>
+
+</html>

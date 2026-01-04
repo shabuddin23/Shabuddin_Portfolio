@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>factorial</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+    <h1>Assignment</h1>
+    <h2 style="text-align: center;"> factorial of a number </h2><br>
+    <div style="text-align: center;">
+        <button onclick="factorial()" style="padding: 10px;font-size: 18px;"> click me !</button><br>
+        <p id="fact" style="border:1px solid black; padding:10px; width:300px;height:300px ;display:inline-block;"></p>
+    </div>
+    <script>
+        function factorial() {
+            var num = Number(prompt("enter a number : "))
+            res = 1n;
+            for (i = 1; i <= num; i++) {
+                res = res * i
+            }
+            document.getElementById("fact").innerHTML += "factorial of " + num + " is : " + res + "<br>";
+
+        }
+
+    </script>
+
+</body>
+
+</html>

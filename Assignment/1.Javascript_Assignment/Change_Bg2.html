@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Changing background-color</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id="bg_change" style="text-align: center;"">
+    <h1>PROJECT - 2</h1>
+    <h2>color changing webpage</h2>
+        <button onclick=" bgchange_b()" style="background-color: blue;padding: 5px;"></button>
+        <button onclick="bgchange_r()" style="background-color: red;padding: 5px;"></button>
+        <button onclick="bgchange_p()" style="background-color: pink;padding: 5px;"></button>
+        <button onclick="bgchange_br()" style="background-color: brown;padding: 5px;"></button>
+    </div>
+    <script>
+        function bgchange_b() {
+            document.querySelector("body").style.backgroundColor = "blue";
+        }
+        function bgchange_r() {
+            document.querySelector("body").style.backgroundColor = "red";
+        }
+        function bgchange_p() {
+            document.querySelector("body").style.backgroundColor = "pink";
+        }
+        function bgchange_br() {
+            document.querySelector("body").style.backgroundColor = "brown";
+        }
+
+    </script>
+
+
+</body>
+
+</html>

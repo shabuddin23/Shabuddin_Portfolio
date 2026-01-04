@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Area</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <h1>Assignment</h1>
+    <h2 style="text-align: center;">Question - 4 : Area of Circle, Triangle and Rectangle</h2>
+
+    <h2> 1. Area of cricle</h2>
+    <button onclick="area_circle()" style="padding: 10px;font-size: 18px;margin-left:30px">click here to calculate area
+        of
+        circle</button>
+    <div id="Circle" style="border:1px solid black; padding:10px; width:400px; margin-left: 30px;">
+        <script>
+            function area_circle() {
+                var radius = Number(prompt("enter the radius of circle :"));
+                if (radius != 0 && radius > 0) {
+                    const pi = 3.14;
+                    var area_c = pi * radius * radius;
+                    document.getElementById("Circle").innerHTML += "Area of Circle of given radius (" + radius + ")" + " is : " + area_c + "<br>";
+                }
+                else {
+                    document.getElementById("Circle").innerHTML += "enter valid radius" + "<br>";
+                }
+            }        
+        </script>
+    </div>
+
+    <h2> 2. Area of Triangle</h2>
+    <button onclick="area_Triangle()" style="padding: 10px;font-size: 18px;margin-left:30px">click here to calculate
+        area
+        of
+        Triangle</button>
+    <div id="Triangle" style="border:1px solid black; padding:10px; width:400px; margin-left: 30px;">
+        <script>
+            function area_Triangle() {
+                var base = Number(prompt("enter the base of Triangle :"));
+                var height = Number(prompt("enter the height of the triangle"))
+
+                if (base != 0 && height != 0 && base > 0 && height > 0) {
+                    const half = 1 / 2;
+                    var area_t = half * base * height;
+                    document.getElementById("Triangle").innerHTML += "Area of Triangle of given base (" + base + ") and Height (" + height + ") is : " + area_t + "<br>";
+                }
+                else {
+                    document.getElementById("Triangle").innerHTML += "enter valid Base and height " + "<br>";
+                }
+            }        
+        </script>
+    </div>
+
+    <h2> 3. Area of Rectangle</h2>
+    <button onclick="area_Rectangle()" style="padding: 10px;font-size: 18px;margin-left:30px">click here to calculate
+        area
+        of
+        Rectangle</button>
+    <div id="Rectangle" style="border:1px solid black; padding:10px; width:400px; margin-left: 30px;">
+        <script>
+            function area_Rectangle() {
+                var width = Number(prompt("enter the width of Rectangle :"));
+                var height = Number(prompt("enter the height of the Rectangle"))
+
+                if (width != 0 && height != 0 && width > 0 && height > 0) {
+                    var area_r = width * height;
+                    document.getElementById("Rectangle").innerHTML += "Area of Rectangle of given width (" + width + ") and Height (" + height + ") is : " + area_r + "<br>";
+                }
+                else {
+                    document.getElementById("Rectangle").innerHTML += "enter valid width and height " + "<br>";
+                }
+            }        
+        </script>
+    </div>
+
+
+</body>
+
+</html>

@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Groceries List</title>
+
+    <style>
+        body {
+            background: linear-gradient(135deg, #74ebd5, #ACB6E5);
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .box {
+            width: 60%;
+            background: #ffffff;
+            padding: 25px;
+            border-radius: 15px;
+            box-shadow: 0px 8px 20px rgba(0,0,0,0.2);
+            margin-top: 40px;
+        }
+
+        h1 {
+            background: #ff6f61;
+            color: white;
+            padding: 10px;
+            border-radius: 8px;
+            width: 50%;
+            margin: auto;
+        }
+
+        h2 {
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        input {
+            padding: 10px;
+            margin: 5px;
+            border-radius: 6px;
+            border: 1px solid #999;
+            font-size: 15px;
+        }
+
+        button {
+            padding: 10px 20px;
+            background: #28a745;
+            color: white;
+            border: none;
+            font-size: 15px;
+            border-radius: 6px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #218838;
+        }
+
+        #list li {
+            padding: 10px;
+            background: #f8f9fa;
+            margin: 7px 0;
+            list-style: none;
+            border-radius: 6px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            box-shadow: 0px 2px 5px rgba(0,0,0,0.1);
+        }
+
+        .delete {
+            background: #e74c3c;
+            padding: 6px 12px;
+            border-radius: 6px;
+            color: white;
+            border: none;
+        }
+
+        .delete:hover {
+            background: #c0392b;
+        }
+
+        .grocery {
+            color: #000;
+            font-weight: bold;
+        }
+
+        .qty {
+            color: #555;
+        }
+    </style>
+</head>
+
+<body>
+    <br><br>
+<div style="text-align: center;">
+<div class="box" style="margin: auto;">
+    <h1>PROJECT - 3</h1>
+    <br>
+    <h2>Groceries List</h2>
+
+    <form id="add-course">
+        <input type="text" id="itemInput" placeholder="Enter item" required />
+        <input type="number" id="qtyInput" placeholder="Qty" required min="1" />
+        <button onclick="add()">Add</button>
+    </form>
+
+    <h2>List of Groceries</h2>
+    <div id="grocery-list">
+        <ul id="list">
+            <li>
+                <span class="grocery">Tomato</span>
+                <span class="qty">(2 Kg)</span>
+                <button class="delete" onclick="deleteItem(this)">Delete</button>
+            </li>
+            <li>
+                <span class="grocery">Onion</span>
+                <span class="qty">(1 Kg)</span>
+                <button class="delete" onclick="deleteItem(this)">Delete</button>
+            </li>
+        </ul>
+    </div>
+</div>
+</div>
+
+<script>
+    function add(){
+        event.preventDefault();
+
+        var item = document.getElementById("itemInput").value;
+        var qty = document.getElementById("qtyInput").value;
+
+        if(item.trim() === "" || qty.trim() === "") return;
+
+        var ul = document.getElementById("list");
+        var li = document.createElement("li");
+
+        li.innerHTML = `
+            <span class="grocery">${item}</span>
+            <span class="qty">(${qty} Kg)</span>
+            <button class="delete" onclick="deleteItem(this)">Delete</button>
+        `;
+
+        ul.appendChild(li);
+
+        document.getElementById("itemInput").value = "";
+        document.getElementById("qtyInput").value = "";
+    }
+
+    function deleteItem(btn){
+        btn.parentNode.remove();
+    }
+</script>
+
+</body>
+</html>
